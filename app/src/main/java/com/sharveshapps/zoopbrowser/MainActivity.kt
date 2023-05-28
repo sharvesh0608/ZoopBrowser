@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         tabsList.add(HomeFragment())
+        tabsList.add(BrowseFragment())
         binding.myPager.adapter = TabsAdapter(supportFragmentManager, lifecycle)
     }
     private inner class TabsAdapter(fa: FragmentManager, lc: Lifecycle) : FragmentStateAdapter(fa,lc) {
