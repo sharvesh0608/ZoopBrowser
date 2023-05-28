@@ -3,4 +3,4 @@
     <string name="enter_url">Enter URL</string>
     <string name="go_btn">Go Button</string>
     <string name="settings_btn">Settings Button</string>
-</resources>
+    <string name="search_hint">Search</string></resources>
