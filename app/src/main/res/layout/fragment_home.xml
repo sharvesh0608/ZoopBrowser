@@ -16,6 +16,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         android:queryHint="@string/search_hint"
+        android:iconifiedByDefault="false"
         android:background="@drawable/custom_search_design"
         app:layout_constraintVertical_bias="0.3"
         android:layout_marginHorizontal="24dp"/>
