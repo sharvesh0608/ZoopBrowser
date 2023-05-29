@@ -14,7 +14,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.sharveshapps.zoopbrowser.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
-    private lateinit var binding : ActivityMainBinding
+    lateinit var binding : ActivityMainBinding
 
     companion object {
     var tabsList: ArrayList<Fragment> = ArrayList()
