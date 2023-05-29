@@ -7,10 +7,7 @@ import android.text.SpannableStringBuilder
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.webkit.URLUtil
-import android.webkit.WebChromeClient
-import android.webkit.WebView
-import android.webkit.WebViewClient
+import android.webkit.*
 import androidx.fragment.app.Fragment
 import com.sharveshapps.zoopbrowser.databinding.FragmentBrowseBinding
 
@@ -102,6 +99,19 @@ class BrowseFragment(private var urlNew: String) : Fragment() {
             }
 
 
+        }
+    }
+
+    override fun onPause() {
+        super.onPause()
+        binding.webView.apply {
+            clearMatches()
+            clearHistory()
+            clearFormData()
+            clearSslPreferences()
+            clearCache(true)
+            CookieManager.getInstance().removeAllCookies(null)
+            WebStorage.getInstance().deleteAllData()
         }
     }
 
